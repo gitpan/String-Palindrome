@@ -1,0 +1,44 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.61.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 b19ab898bba85f97fa8f5c0fd301fd0ecbd8e122 Changes
+SHA1 c45b38786c5aa1bd3e3f724381f7848dd3f713af MANIFEST
+SHA1 ca151556c2326bfcda3d9f7da509e52e518ec873 MANIFEST.SKIP
+SHA1 96de4534973898dd2e261e32517ab2c7a06fa0e4 META.yml
+SHA1 727acba6c9ee10c1e93047513560ee80df31dcb3 Makefile
+SHA1 2b3155164526f2cb6ceab8859a58b6477f505d64 Makefile.PL
+SHA1 09bceb4a74e0603293afb7538a1f2952f580b470 README
+SHA1 fd5f3c4f0418efee3b9b16cf8c3902e8374909df inc/Module/Install.pm
+SHA1 7cd7c349afdf3f012e475507b1017bdfa796bfbd inc/Module/Install/Base.pm
+SHA1 ba186541bbf6439111f01fc70769cf24d22869bf inc/Module/Install/Can.pm
+SHA1 aaa50eca0d7751db7a4d953fac9bc72c6294e238 inc/Module/Install/Fetch.pm
+SHA1 3e83972921d54198d1246f7278f08664006cd65d inc/Module/Install/Makefile.pm
+SHA1 12bf1867955480d47d5171a9e9c6a96fabe0b58f inc/Module/Install/Metadata.pm
+SHA1 f7ee667e878bd2faf22ee9358a7b5a2cc8e91ba4 inc/Module/Install/Win32.pm
+SHA1 8ed29d6cf217e0977469575d788599cbfb53a5ca inc/Module/Install/WriteAll.pm
+SHA1 d7465a0184d818077515440844f723f4dc02d8e4 lib/String/Palindrome.pm
+SHA1 aa67529150ab0627e73fdb8a224abd691e5172db t/00-load.t
+SHA1 bea01bc1070d7acb747e7457d812906df86422b6 t/01-func_test.t
+SHA1 e10fa45f7a8aa98b2c9455542accc00e9bc0b2e4 t/boilerplate.t
+SHA1 0b1c5a2d59be6bfa7d60c64cd964fea6a0331705 t/pod-coverage.t
+SHA1 640935336dc1123c0069bcf5432bcaedc2cf22d3 t/pod.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.9 (GNU/Linux)
+
+iEYEARECAAYFAkslqN8ACgkQI/ME1FsGbTRBHwCghrqtH3DCTZ/fzwwHLtm6YbP/
+VlEAn1KbSEbLOlDBLk3eJ+6IB6i/WwKe
+=saBR
+-----END PGP SIGNATURE-----
