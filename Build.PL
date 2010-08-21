@@ -22,7 +22,7 @@ my %module_build_args = (
     'Adam Lesperance <lespea@gmail.com>'
   ],
   'dist_name' => 'String-Palindrome',
-  'dist_version' => '1.01',
+  'dist_version' => '1.02',
   'license' => 'perl',
   'module_name' => 'String::Palindrome',
   'recommends' => {},

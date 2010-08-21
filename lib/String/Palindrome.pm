@@ -3,7 +3,7 @@ use strict;
 
 package String::Palindrome;
 BEGIN {
-  $String::Palindrome::VERSION = '1.01';
+  $String::Palindrome::VERSION = '1.02';
 }
 
 require Exporter;
@@ -69,7 +69,7 @@ String::Palindrome - Determine if a string is a palindrome
 
 =head1 VERSION
 
-version 1.01
+version 1.02
 
 =head1 SYNOPSIS
 
