@@ -52,7 +52,7 @@
          "url" : "git://github.com/lespea/String-Palindrome"
       }
    },
-   "version" : "1.000",
+   "version" : "1.01",
    "x_Dist_Zilla" : {
       "plugins" : [
          {

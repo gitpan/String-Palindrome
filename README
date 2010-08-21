@@ -2,7 +2,7 @@ NAME
     String::Palindrome - Determine if a string is a palindrome
 
 VERSION
-    version 1.000
+    version 1.01
 
 SYNOPSIS
         use String::Palindrome qw/ is_palindrome /;
