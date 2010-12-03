@@ -3,7 +3,10 @@ use strict;
 
 package String::Palindrome;
 BEGIN {
-  $String::Palindrome::VERSION = '1.02';
+  $String::Palindrome::AUTHORITY = 'cpan:LESPEA';
+}
+BEGIN {
+  $String::Palindrome::VERSION = '1.03';
 }
 
 require Exporter;
@@ -40,13 +43,13 @@ sub is_palindrome {
         for  (my ($i, $j) = (0, $#{$arg});  $i < $j;  $i++, $j--) {
             my ($a, $b) = @{$arg}[$i, $j];
             if  (!defined $a) {
-                return 0  if  !defined $b;
+                return 0  if  defined $b;
             }
             elsif (!defined $b) {
                 return 0;
             }
             else {
-                return 0  unless  $arg->[$i] eq $arg->[$j];
+                return 0  unless  $a eq $b;
             }
         }
         return 1;
@@ -69,7 +72,7 @@ String::Palindrome - Determine if a string is a palindrome
 
 =head1 VERSION
 
-version 1.02
+version 1.03
 
 =head1 SYNOPSIS
 
@@ -117,7 +120,7 @@ is_palindrome
 
 =head2 is_palindrome
 
-Returns true if the string, array_ref, or array is a palindrome.  If more than
+Returns true if the string, array, or array_ref is a palindrome.  If more than
 one parameter is passed to the function, then it will blindly assume that you
 want to treat them as an array to be tested.  This means that you could,
 theoretically, pass in a palindrome of array_refs and it would still pass.
@@ -195,11 +198,11 @@ L<http://matrix.cpantesters.org/?dist=String-Palindrome>
 
 Source Code Repository
 
-The code is open to the world, and available for you to hack on. Please feel free to browse it and play
-with it, or whatever. If you want to contribute patches, please send me a diff or prod me to pull
-from your repository :)
+You can contribute or fork this project via github:
 
-L<git://github.com/lespea/String-Palindrome>
+L<http://github.com/lespea/string-palindrome>
+
+    git clone git://github.com/lespea/string-palindrome.git
 
 =back
 
