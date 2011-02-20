@@ -8,9 +8,11 @@ BEGIN {
 
 use strict;
 use warnings;
+
 use Test::More;
 
-eval 'use Test::EOL';
-plan skip_all => 'Test::EOL required' if $@;
+eval "use Test::ConsistentVersion";
+plan skip_all => "Test::ConsistentVersion required for this test"
+  if $@;
 
-all_perl_files_ok( { trailing_whitespace => 1 } );
+Test::ConsistentVersion::check_consistent_versions();

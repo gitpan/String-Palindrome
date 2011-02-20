@@ -7,12 +7,15 @@ use Module::Build 0.3601;
 
 my %module_build_args = (
   'build_requires' => {
+    'Carp' => '0',
     'Data::Dumper' => '0',
     'English' => '0',
     'File::Find' => '0',
     'File::Temp' => '0',
     'Module::Build' => '0.3601',
-    'Test::More' => '0'
+    'Scalar::Util' => '0',
+    'Test::More' => '0.94',
+    'perl' => '5.004'
   },
   'configure_requires' => {
     'Module::Build' => '0.3601'
@@ -22,14 +25,15 @@ my %module_build_args = (
     'Adam Lesperance <lespea@gmail.com>'
   ],
   'dist_name' => 'String-Palindrome',
-  'dist_version' => '1.03',
+  'dist_version' => '2.000000',
   'license' => 'perl',
   'module_name' => 'String::Palindrome',
   'recommends' => {},
   'recursive_test_files' => 1,
   'requires' => {
     'Exporter' => '0',
-    'perl' => '5.006',
+    'perl' => '5.008',
+    'utf8' => '0',
     'vars' => '0'
   },
   'script_files' => []
