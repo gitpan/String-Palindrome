@@ -4,7 +4,7 @@ use utf8;
 
 package String::Palindrome;
 BEGIN {
-  $String::Palindrome::VERSION = '2.000000';
+  $String::Palindrome::VERSION = '2.000001';
 }
 BEGIN {
   $String::Palindrome::AUTHORITY = 'cpan:LESPEA';
@@ -14,7 +14,7 @@ require Exporter;
 
 use vars qw(@EXPORT_OK);
 use base qw(Exporter);
-@EXPORT_OK = qw(is_palindrome);    # symbols to export on request
+@EXPORT_OK  = qw(is_palindrome);  # symbols to export on request
 
 
 # ABSTRACT: Determine if a string is a palindrome
@@ -22,12 +22,11 @@ use base qw(Exporter);
 
 
 
-sub is_palindrome {    ## no critic 'Subroutines::RequireArgUnpacking'
-                       #  Get the args out
-    my $arg =
-      @_ > 1
-      ? \@_
-      : $_[0];
+sub is_palindrome {  ## no critic 'Subroutines::RequireArgUnpacking'
+    #  Get the args out
+    my $arg  =  @_ > 1  ?  \@_
+             :             $_[0]
+             ;
 
     #  If no arg was given, then return undef
     if ( !defined $arg ) {
@@ -35,36 +34,34 @@ sub is_palindrome {    ## no critic 'Subroutines::RequireArgUnpacking'
     }
 
     #  Check to see if we're dealing with a reference
-    elsif ( ref $arg ) {
-
+    elsif  (ref $arg) {
         #  Return immediately if this isn't an array ref or the array ref
         #  contains no values
-        return unless ref $arg eq 'ARRAY';
-        return unless @$arg;
+        return  unless  ref $arg eq 'ARRAY';
+        return  unless  @$arg;
 
-        for ( my ( $i, $j ) = ( 0, $#{$arg} ) ; $i < $j ; $i++, $j-- )
-        {    ## no critic 'ControlStructures::ProhibitCStyleForLoops ValuesAndExpressions::ProhibitCommaSeparatedStatements'
-            my ( $a, $b ) = @{$arg}[ $i, $j ];
-            if ( !defined $a ) {
-                return 0 if defined $b;
+        for  (my ($i, $j) = (0, $#{$arg});  $i < $j;  $i++, $j--) {  ## no critic 'ControlStructures::ProhibitCStyleForLoops ValuesAndExpressions::ProhibitCommaSeparatedStatements'
+            my ($a, $b) = @{$arg}[$i, $j];
+            if  (!defined $a) {
+                return 0  if  defined $b;
             }
-            elsif ( !defined $b ) {
+            elsif (!defined $b) {
                 return 0;
             }
             else {
-                return 0 unless $a eq $b;
+                return 0  unless  $a eq $b;
             }
-        } ## end for ( my ( $i, $j ) = (...))
+        }
         return 1;
-    } ## end elsif ( ref $arg )
+    }
 
     else {
-        return ( $arg ne q{} and $arg eq reverse $arg ) ? 1 : 0;
+        return  ($arg ne q{}  and  $arg eq reverse $arg)  ?  1  :  0;
     }
-} ## end sub is_palindrome
+}
 
 
-1;    # End of String::Palindrome
+1; # End of String::Palindrome
 
 __END__
 =pod
@@ -75,7 +72,7 @@ String::Palindrome - Determine if a string is a palindrome
 
 =head1 VERSION
 
-version 2.000000
+version 2.000001
 
 =head1 SYNOPSIS
 
@@ -164,17 +161,23 @@ in addition to those websites please use your favorite search engine to discover
 
 Search CPAN
 
+The default CPAN search engine, useful to view POD in HTML format.
+
 L<http://search.cpan.org/dist/String-Palindrome>
 
 =item *
 
 RT: CPAN's Bug Tracker
 
+The RT ( Request Tracker ) website is the default bug/issue tracking system for CPAN.
+
 L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=String-Palindrome>
 
 =item *
 
-AnnoCPAN: Annotated CPAN documentation
+AnnoCPAN
+
+The AnnoCPAN is a website that allows community annonations of Perl module documentation.
 
 L<http://annocpan.org/dist/String-Palindrome>
 
@@ -182,31 +185,49 @@ L<http://annocpan.org/dist/String-Palindrome>
 
 CPAN Ratings
 
+The CPAN Ratings is a website that allows community ratings and reviews of Perl modules.
+
 L<http://cpanratings.perl.org/d/String-Palindrome>
 
 =item *
 
 CPAN Forum
 
+The CPAN Forum is a web forum for discussing Perl modules.
+
 L<http://cpanforum.com/dist/String-Palindrome>
 
 =item *
 
-CPANTS Kwalitee
+CPANTS
+
+The CPANTS is a website that analyzes the Kwalitee ( code metrics ) of a distribution.
 
 L<http://cpants.perl.org/dist/overview/String-Palindrome>
 
 =item *
 
-CPAN Testers Results
+CPAN Testers
 
-L<http://cpantesters.org/distro/S/String-Palindrome.html>
+The CPAN Testers is a network of smokers who run automated tests on uploaded CPAN distributions.
+
+L<http://www.cpantesters.org/distro/S/String-Palindrome>
 
 =item *
 
 CPAN Testers Matrix
 
+The CPAN Testers Matrix is a website that provides a visual way to determine what Perls/platforms PASSed for a distribution.
+
 L<http://matrix.cpantesters.org/?dist=String-Palindrome>
+
+=item *
+
+CPAN Testers Dependencies
+
+The CPAN Testers Dependencies is a website that shows a chart of the test results of all dependencies for a distribution.
+
+L<http://deps.cpantesters.org/?module=String::Palindrome>
 
 =back
 
@@ -228,7 +249,7 @@ L<https://github.com/lespea/string-palindrome>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Adam Lesperance.
+This software is copyright (c) 2011 by Adam Lesperance.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

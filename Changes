@@ -1,7 +1,13 @@
 Revision history for String-Palindrome
 
+2.000001  2011-06-21 00:45:48 America/Chicago
+    [Enhancement]
+    *   Rebuild with newer dzil plugin to stop indexing README.html on CPAN
+
+
 2.000000  2011-02-19 19:29:50 America/Chicago
     *   Switch over to new dzil config
+
 
 1.03        2010-12-03 03:51:27 America/Chicago
     *   Correctly process an array containing undefs
@@ -18,11 +24,11 @@ Revision history for String-Palindrome
     *   Move back to correct # of minor version numbers (\d.\d\d)
 
 
-1.000       2010-08-12 2:01:30 America/Chicago
+1.000       2010-08-12 02:01:30 America/Chicago
     *   Switched to Dist::Zilla
     *   Allow checking an array (or array ref) if it is a palindrome
 
 
-0.01    2009-12-13 20:53:52 America/Chicago
+0.01        2009-12-13 20:53:52 America/Chicago
         First version, released on an unsuspecting world.
 

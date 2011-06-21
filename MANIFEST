@@ -15,10 +15,10 @@ examples/example.pl
 lib/String/Palindrome.pm
 perlcritic.rc
 t/00-compile.t
-t/000-report-versions.t
+t/000-report-versions-tiny.t
 t/01-func_test.t
 t/author-critic.t
-t/release-check-changes.t
+t/release-common_spelling.t
 t/release-consistent-version.t
 t/release-cpan-changes.t
 t/release-dist-manifest.t

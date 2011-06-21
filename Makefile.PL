@@ -2,9 +2,9 @@
 use strict;
 use warnings;
 
-BEGIN { require 5.008; }
+use 5.008;
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
@@ -12,18 +12,15 @@ my %WriteMakefileArgs = (
   'ABSTRACT' => 'Determine if a string is a palindrome',
   'AUTHOR' => 'Adam Lesperance <lespea@gmail.com>',
   'BUILD_REQUIRES' => {
-    'Carp' => '0',
     'Data::Dumper' => '0',
     'English' => '0',
     'File::Find' => '0',
     'File::Temp' => '0',
-    'ExtUtils::MakeMaker' => '6.31',
-    'Scalar::Util' => '0',
-    'Test::More' => '0.94',
-    'perl' => '5.004'
+    'ExtUtils::MakeMaker' => '6.30',
+    'Test::More' => '0.88'
   },
   'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+    'ExtUtils::MakeMaker' => '6.30'
   },
   'DISTNAME' => 'String-Palindrome',
   'EXE_FILES' => [],
@@ -34,7 +31,7 @@ my %WriteMakefileArgs = (
     'utf8' => '0',
     'vars' => '0'
   },
-  'VERSION' => '2.000000',
+  'VERSION' => '2.000001',
   'test' => {
     'TESTS' => 't/*.t'
   }
